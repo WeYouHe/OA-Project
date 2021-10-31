@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OAWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="C_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VOCATION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLIENT_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="CLIENT_VOCATION" Type="varchar" MaxLength="10" />
+    <Property Name="CLIENT_CY" Type="char" MaxLength="11" />
+    <Property Name="CLIENT_ADDRESS" Type="varchar" MaxLength="30" />
+    <Property Name="CLIENT_BANK" Type="varchar" MaxLength="10" />
+    <Property Name="CLIENT_BANKNUM" Type="char" MaxLength="19" Nullable="false" />
+    <Property Name="CLIENT_TYPE_ID" Type="int" Nullable="false" />
+    <Property Name="CLIENT_USER" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Controller">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MenuIcon" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ControllerAction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionTitle" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="href" Type="varchar" MaxLength="40" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="ChildID" Type="int" />
+    <Property Name="ControllID" Type="int" />
+    <Property Name="Update_time" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ControllRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControllId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepNAME" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Leave">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LEAVE_NAME" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="DEPART_ID" Type="int" Nullable="false" />
+    <Property Name="START_DATE" Type="datetime" Nullable="false" />
+    <Property Name="END_DATE" Type="datetime" Nullable="false" />
+    <Property Name="LEAVE_TYPE" Type="int" Nullable="false" />
+    <Property Name="REASONS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CHECK_DATE" Type="datetime" />
+    <Property Name="CHECK_FLAG" Type="int" Nullable="false" />
+    <Property Name="CHECK_NAME" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="OverTime">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="START_DATE" Type="datetime" />
+    <Property Name="END_DATE" Type="datetime" />
+    <Property Name="DEPART_ID" Type="int" Nullable="false" />
+    <Property Name="REASONS" Type="varchar" MaxLength="50" />
+    <Property Name="CHECK_DATE" Type="datetime" />
+    <Property Name="CHECK_NAME" Type="varchar" MaxLength="8" />
+    <Property Name="CHECK_FLAG" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Plant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PLANT_NAME" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CREA_DATE" Type="smalldatetime" Nullable="false" />
+    <Property Name="START_DATE" Type="datetime" />
+    <Property Name="END_DATE" Type="datetime" />
+    <Property Name="CARRY_USER" Type="varchar" MaxLength="8" />
+    <Property Name="CREA_USER" Type="varchar" MaxLength="8" />
+    <Property Name="PLANT_INFO" Type="varchar" MaxLength="700" />
+    <Property Name="IN_FLAG" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RoleDesc" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="PORTRAIT" Type="varchar" MaxLength="100" />
+    <Property Name="NAME" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SEX" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="20" />
+    <Property Name="PHONE" Type="char" MaxLength="15" />
+    <Property Name="ADDRESS" Type="varchar" MaxLength="30" />
+    <Property Name="BIRTHDAY" Type="datetime" />
+    <Property Name="LOGINS" Type="int" Nullable="false" />
+    <Property Name="DEPAR_ID" Type="int" Nullable="false" />
+    <Property Name="CREATE_DATE" Type="smalldatetime" Nullable="false" />
+    <Property Name="UPDATE_DATE" Type="smalldatetime" Nullable="false" />
+    <Property Name="ROLEID" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“OAWeb.dbo.View_CRM”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="View_CRM">
+    <Key>
+      <PropertyRef Name="Title" />
+      <PropertyRef Name="ActionTitle" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="NAME" />
+      <PropertyRef Name="CREATE_DATE" />
+      <PropertyRef Name="Update_time" />
+      <PropertyRef Name="ParentID" />
+      <PropertyRef Name="MenuIcon" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ROLEID" />
+    </Key>
+    <Property Name="Title" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ActionTitle" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="href" Type="varchar" MaxLength="40" />
+    <Property Name="RoleName" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RoleDesc" Type="varchar" MaxLength="20" />
+    <Property Name="NAME" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CREATE_DATE" Type="smalldatetime" Nullable="false" />
+    <Property Name="ChildID" Type="int" />
+    <Property Name="Update_time" Type="smalldatetime" Nullable="false" />
+    <Property Name="ControllID" Type="int" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="MenuIcon" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ROLEID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Users_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="ROLEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OAWebModelStoreContainer">
+    <EntitySet Name="C_Type" EntityType="Self.C_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Controller" EntityType="Self.Controller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControllerAction" EntityType="Self.ControllerAction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ControllRole" EntityType="Self.ControllRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Leave" EntityType="Self.Leave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OverTime" EntityType="Self.OverTime" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Plant" EntityType="Self.Plant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View_CRM" EntityType="Self.View_CRM" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_CRM].[Title] AS [Title], 
+    [View_CRM].[ActionTitle] AS [ActionTitle], 
+    [View_CRM].[href] AS [href], 
+    [View_CRM].[RoleName] AS [RoleName], 
+    [View_CRM].[RoleDesc] AS [RoleDesc], 
+    [View_CRM].[NAME] AS [NAME], 
+    [View_CRM].[CREATE_DATE] AS [CREATE_DATE], 
+    [View_CRM].[ChildID] AS [ChildID], 
+    [View_CRM].[Update_time] AS [Update_time], 
+    [View_CRM].[ControllID] AS [ControllID], 
+    [View_CRM].[ParentID] AS [ParentID], 
+    [View_CRM].[MenuIcon] AS [MenuIcon], 
+    [View_CRM].[STATUS] AS [STATUS], 
+    [View_CRM].[ID] AS [ID], 
+    [View_CRM].[ROLEID] AS [ROLEID]
+    FROM [dbo].[View_CRM] AS [View_CRM]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Users_Role" Association="Self.FK_Users_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

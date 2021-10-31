@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OAWebModelStoreContainer" CdmEntityContainer="OAWebEntities1">
+    <EntitySetMapping Name="C_Type">
+      <EntityTypeMapping TypeName="OAWebModel.C_Type">
+        <MappingFragment StoreEntitySet="C_Type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="VOCATION" ColumnName="VOCATION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="OAWebModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="CLIENT_ID" ColumnName="CLIENT_ID" />
+          <ScalarProperty Name="CLIENT_NAME" ColumnName="CLIENT_NAME" />
+          <ScalarProperty Name="CLIENT_VOCATION" ColumnName="CLIENT_VOCATION" />
+          <ScalarProperty Name="CLIENT_CY" ColumnName="CLIENT_CY" />
+          <ScalarProperty Name="CLIENT_ADDRESS" ColumnName="CLIENT_ADDRESS" />
+          <ScalarProperty Name="CLIENT_BANK" ColumnName="CLIENT_BANK" />
+          <ScalarProperty Name="CLIENT_BANKNUM" ColumnName="CLIENT_BANKNUM" />
+          <ScalarProperty Name="CLIENT_TYPE_ID" ColumnName="CLIENT_TYPE_ID" />
+          <ScalarProperty Name="CLIENT_USER" ColumnName="CLIENT_USER" />
+          <ScalarProperty Name="CLIENT_Lv" ColumnName="CLIENT_Lv" />
+          <ScalarProperty Name="CLIENT_POTENTIAL" ColumnName="CLIENT_POTENTIAL" />
+          <ScalarProperty Name="CLIENT_NOW" ColumnName="CLIENT_NOW" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Controllers">
+      <EntityTypeMapping TypeName="OAWebModel.Controller">
+        <MappingFragment StoreEntitySet="Controller">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControllerActions">
+      <EntityTypeMapping TypeName="OAWebModel.ControllerAction">
+        <MappingFragment StoreEntitySet="ControllerAction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ActionTitle" ColumnName="ActionTitle" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="href" ColumnName="href" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="ControllID" ColumnName="ControllID" />
+          <ScalarProperty Name="Update_time" ColumnName="Update_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ControllRoles">
+      <EntityTypeMapping TypeName="OAWebModel.ControllRole">
+        <MappingFragment StoreEntitySet="ControllRole">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ControllId" ColumnName="ControllId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="OAWebModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepNAME" ColumnName="DepNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Leaves">
+      <EntityTypeMapping TypeName="OAWebModel.Leave">
+        <MappingFragment StoreEntitySet="Leave">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LEAVE_NAME" ColumnName="LEAVE_NAME" />
+          <ScalarProperty Name="DEPART_ID" ColumnName="DEPART_ID" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="DAY_NUM" ColumnName="DAY_NUM" />
+          <ScalarProperty Name="LEAVE_TYPE" ColumnName="LEAVE_TYPE" />
+          <ScalarProperty Name="REASONS" ColumnName="REASONS" />
+          <ScalarProperty Name="CHECK_DATE" ColumnName="CHECK_DATE" />
+          <ScalarProperty Name="CHECK_FLAG" ColumnName="CHECK_FLAG" />
+          <ScalarProperty Name="CHECK_NAME" ColumnName="CHECK_NAME" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OverTimes">
+      <EntityTypeMapping TypeName="OAWebModel.OverTime">
+        <MappingFragment StoreEntitySet="OverTime">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="DEPART_ID" ColumnName="DEPART_ID" />
+          <ScalarProperty Name="DAY_NUM" ColumnName="DAY_NUM" />
+          <ScalarProperty Name="REASONS" ColumnName="REASONS" />
+          <ScalarProperty Name="CHECK_DATE" ColumnName="CHECK_DATE" />
+          <ScalarProperty Name="CHECK_NAME" ColumnName="CHECK_NAME" />
+          <ScalarProperty Name="CHECK_FLAG" ColumnName="CHECK_FLAG" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="LEAVE_TYPE" ColumnName="LEAVE_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plants">
+      <EntityTypeMapping TypeName="OAWebModel.Plant">
+        <MappingFragment StoreEntitySet="Plant">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PLANT_NAME" ColumnName="PLANT_NAME" />
+          <ScalarProperty Name="CREA_DATE" ColumnName="CREA_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="CARRY_USER" ColumnName="CARRY_USER" />
+          <ScalarProperty Name="CREA_USER" ColumnName="CREA_USER" />
+          <ScalarProperty Name="PLANT_INFO" ColumnName="PLANT_INFO" />
+          <ScalarProperty Name="IN_FLAG" ColumnName="IN_FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="OAWebModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleDesc" ColumnName="RoleDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="OAWebModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="PORTRAIT" ColumnName="PORTRAIT" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+          <ScalarProperty Name="LOGINS" ColumnName="LOGINS" />
+          <ScalarProperty Name="DEPAR_ID" ColumnName="DEPAR_ID" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_CRM">
+      <EntityTypeMapping TypeName="OAWebModel.View_CRM">
+        <MappingFragment StoreEntitySet="View_CRM">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ActionTitle" ColumnName="ActionTitle" />
+          <ScalarProperty Name="href" ColumnName="href" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleDesc" ColumnName="RoleDesc" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="ChildID" ColumnName="ChildID" />
+          <ScalarProperty Name="Update_time" ColumnName="Update_time" />
+          <ScalarProperty Name="ControllID" ColumnName="ControllID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_UserTime">
+      <EntityTypeMapping TypeName="OAWebModel.View_UserTime">
+        <MappingFragment StoreEntitySet="View_UserTime">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="DEPART_ID" ColumnName="DEPART_ID" />
+          <ScalarProperty Name="DAY_NUM" ColumnName="DAY_NUM" />
+          <ScalarProperty Name="REASONS" ColumnName="REASONS" />
+          <ScalarProperty Name="CHECK_DATE" ColumnName="CHECK_DATE" />
+          <ScalarProperty Name="CHECK_NAME" ColumnName="CHECK_NAME" />
+          <ScalarProperty Name="CHECK_FLAG" ColumnName="CHECK_FLAG" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="LEAVE_TYPE" ColumnName="LEAVE_TYPE" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
